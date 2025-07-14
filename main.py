@@ -15,7 +15,9 @@ def get_main(url,r):
 
     print(f"Generating user persona for u/{username}...")
     persona = generate_persona(content_list,referer=r)
-
+    # if you want a txt file uncomment this line 
+    # with open(f"{username}_persona.txt", "w", encoding="utf-8") as f:
+    #     f.write(persona)
     
     persona = persona.strip()
 
