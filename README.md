@@ -97,13 +97,13 @@ markdown2
 Gunicorn (for deployment)
 
 📌 Notes
-Ensure your GitHub repo is public so it’s accessible for review.
+
 
 The project is built following Python PEP-8 guidelines.
 
 No Reddit login required — public data only.
 
-All .txt persona files are auto-generated per profile.
+
 
 👨‍💻 License & Ownership
 This project and code are the property of the author. Submitted only for internship evaluation. No code may be reused unless the author is selected for the paid role.
