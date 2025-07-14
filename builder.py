@@ -12,29 +12,29 @@ def build_prompt(content_list):
     )
 
     prompt = f"""
-You are an AI trained to analyze a Reddit user's posts and generate a structured JSON-based persona.
-
-Analyze the following Reddit content and return the output strictly as JSON in this format:
-
-{{
-  "name": "string (nickname or Reddit handle if found)",
-  "age": "string (like '20-30 years')",
-  "gender": "string ('Male', 'Female', or 'Unknown')",
-  "occupation": "string (like 'Student', 'Software Engineer', etc)",
-  "hobbies": ["list of hobbies"],
-  "political_views": ["list of views"],
-  "personality": ["list of traits"],
-  "language_style": ["list of patterns (e.g. 'sarcastic', 'casual')"],
-  "frequent_subreddits": ["list of subreddits"],
-  "notable_beliefs": ["list of opinions"],
-  "summary": "A paragraph summarizing the user persona"
-}}
-
-ONLY RETURN THE JSON OBJECT. DO NOT include any commentary, markdown formatting, or explanation.
-
-Use these Reddit posts and comments to extract information:
-
-{examples}
+    You are an AI trained to analyze a Reddit user's posts and generate a structured JSON-based persona.
+    
+    Analyze the following Reddit content and return the output strictly as JSON in this format:
+    
+    {{
+      "name": "string (nickname or Reddit handle if found)",
+      "age": "string (like '20-30 years')",
+      "gender": "string ('Male', 'Female', or 'Unknown')",
+      "occupation": "string (like 'Student', 'Software Engineer', etc)",
+      "hobbies": ["list of hobbies"],
+      "political_views": ["list of views"],
+      "personality": ["list of traits"],
+      "language_style": ["list of patterns (e.g. 'sarcastic', 'casual')"],
+      "frequent_subreddits": ["list of subreddits"],
+      "notable_beliefs": ["list of opinions"],
+      "summary": "A paragraph summarizing the user persona"
+    }}
+    
+    ONLY RETURN THE JSON OBJECT. DO NOT include any commentary, markdown formatting, or explanation.
+    
+    Use these Reddit posts and comments to extract information:
+    
+    {examples}
     """
     return prompt
 
