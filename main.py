@@ -38,7 +38,7 @@ def render_homepage():
 @app.route("/generate",methods=["POST","GET"])
 def generate():
     url=request.form.get("reddit_url")
-    referer = request.host_url
+    referer = request.headers.get("Origin") or "https://reddit-user-persona-builder.onrender.com"
     result=get_main(url,r=referer)
     return render_template("generate.html",result=result)
 
